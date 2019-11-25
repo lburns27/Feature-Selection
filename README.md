@@ -16,6 +16,14 @@ This repository contains R code for various feature selection methods. The code 
     * censoring indicator
   * Output: R<sup>2</sup> measure
   
+* **R<sup>2</sup><sub>LR</sub> & R<sup>2</sup><sub>I</sub> Measures**: This code contains functions for R<sup>2</sup><sub>LR</sub>, R<sup>2</sup><sub>I<sub>PO</sub></sub> & R<sup>2</sup><sub>I<sub>PH</sub></sub>. There are options for adjusting for age and stage, if desired.
+  * Required: R packages (survival, timereg)
+  * Inputs: 
+    * predictor, x (gene expression)
+    * survival time
+    * censoring indicator
+  * Output: R<sup>2</sup> measures
+  
 * **Youden & AUC**: Computes Youden & AUC values based on gene ranking by a specified feature selection method
   * Required: R packages (MESS)
   * Inputs: 
