@@ -8,6 +8,14 @@ This repository contains R code for various feature selection methods. The code 
     * data frame with n rows (number of subjects) and columns with survival information (time = survival time, censor = censoring information) and p genes   
   * Output: model coefficient (beta), coefficient standard error, significance p-value, GOF p-value
   
+* **Pseudo-R<sup>2</sup> Measures**: Includes functions for calculating each pseudo-R<sup>2</sup> measures (PO, CO, CH, ModCH and PH).  Note, each measure has a separate function.  In the future, we plan to combine the code into one R<sup>2</sup> function with option `type = c("PO", "CO", "CH", "ModCH", "PH")`. 
+  * Required: R package (survival)
+  * Inputs: 
+    * predictor, x (gene expression)
+    * survival time
+    * censoring indicator
+  * Output: R<sup>2</sup> measure
+  
 * **Youden & AUC**: Computes Youden & AUC values based on gene ranking by a specified feature selection method
   * Required: R packages (MESS)
   * Inputs: 
