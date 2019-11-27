@@ -24,6 +24,16 @@ This repository contains R code for various feature selection methods. The code 
     * censoring indicator
   * Output: R<sup>2</sup> measures
   
+* **I Measures**: This code contains functions for I<sub>PO</sub> and I<sub>YP</sub>. There are options for adjusting for age and stage for I<sub>PO</sub>, if desired.
+  * Required: R packages (survival, timereg, YPmodel)
+  * This code assumes that your data is in the the following form:
+    * Column 1 = survival time (time)
+    * Column 2 = censoring indicator (censor)
+    * Columns 3+ = genes
+  * Output: 
+    * I<sub>PO</sub>, outPO (I, I test statistic, I p-value)
+    * I<sub>YP</sub>, outYP (I, I test statistic, I p-value)
+  
 * **Youden & AUC**: Computes Youden & AUC values based on gene ranking by a specified feature selection method
   * Required: R packages (MESS)
   * Inputs: 
