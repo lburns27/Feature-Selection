@@ -39,7 +39,7 @@ This repository contains R code for various feature selection methods. The code 
   * Inputs: 
     * data frame with n rows (number of genes) and 1 column (feature selection measure)
     * effectGenes: number of significant genes
-  * Output option: Specificity, Sensitivity, Youden, AUC & AUC standard deviation
+  * Output option: Specificity, Sensitivity, Youden & AUC 
 
 * **Simulations**: Contains R code for simulating data
   * Scheme 1: Univariate aproach; genes linked to survival one at a time
