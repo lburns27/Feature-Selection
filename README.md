@@ -50,7 +50,20 @@ This repository contains R code for various feature selection methods. The code 
     * I<sub>PO</sub>, I<sub>YP</sub>, & concreg (*dichotomized case is coded separately*)
     * R<sup>2</sup><sub>PO</sub>, R<sup>2</sup><sub>I<sub>PO</sub></sub> & R<sup>2</sup><sub>LR</sub> 
     * R<sup>2</sup><sub>PO</sub>, R<sup>2</sup><sub>ModCH</sub> & R<sup>2</sup><sub>CO</sub>
-  
+    
+* **Other Existing Measures**: This code contains functions for computing some existing measures in the literature.
+  * Required: R packages (concreg, survAUC, survival, pec, timereg)
+  * Measures computed:
+    * Concreg (Dunkler et al. 2010)
+    * Uno's C (Uno et al. 2011)
+    * R<sup>2</sup><sub>G</sub> - PH & PO cases (Graf et al. 1999; Gerds & Schumacher 2006)
+    * R<sup>2</sup><sub>SH</sub> (Schemper & Henderson 2000)
+  * Inputs: 
+    * predictor, x (gene expression)
+    * survival time
+    * censoring indicator
+  * Output: Concreg (absolute effect size), Uno's C, R<sup>2</sup><sub>G</sub> (PH), R<sup>2</sup><sub>G</sub> (PO) and R<sup>2</sup><sub>SH</sub>.
+    
 * **Simulations**: Contains R code for simulating data
   * Scheme 1: Univariate aproach; genes linked to survival one at a time
   * Scheme 2: Multivariate approach; incorporates correlation between features
