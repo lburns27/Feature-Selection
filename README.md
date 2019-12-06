@@ -41,6 +41,16 @@ This repository contains R code for various feature selection methods. The code 
     * effectGenes: number of significant genes
   * Output option: Specificity, Sensitivity, Youden & AUC 
 
+* **Venn Diagrams**: This code creates Venn Diagrams showing various interestions between different feature selection measures.
+  * Required: R packages (gpplots, VennDiagram, latex2exp)
+  * Inputs: 
+    * Obtain a data frame named "out" with n rows (number of genes) and	1 column for each of the measures listed above (except I<sub>YP</sub>). All measures here are based on continuous gene expression. 
+    * Obtain a data frame named "out2" with n rows (number of genes) and 1 column for each of the measures based on dichotomized expression (I<sub>YP</sub>, I<sub>PO</sub>, concreg). 
+  * Venn Diagrams created: 
+    * I<sub>PO</sub>, I<sub>YP</sub>, & concreg (*dichotomized case is coded separately*)
+    * R<sup>2</sup><sub>PO</sub>, R<sup>2</sup><sub>I<sub>PO</sub></sub> & R<sup>2</sup><sub>LR</sub> 
+    * R<sup>2</sup><sub>PO</sub>, R<sup>2</sup><sub>ModCH</sub> & R<sup>2</sup><sub>CO</sub>
+  
 * **Simulations**: Contains R code for simulating data
   * Scheme 1: Univariate aproach; genes linked to survival one at a time
   * Scheme 2: Multivariate approach; incorporates correlation between features
