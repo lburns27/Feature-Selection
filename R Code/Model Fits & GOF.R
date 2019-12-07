@@ -99,23 +99,24 @@ doPropOdds <- function(x){
 	splitdat <- apply(dat[,3:ncol(dat)], 2, split)
 
 # Fit YP model via loop
-	beta <- c()
-	gamma <- c()
-	beta_se <- c()
-	gamma_se <- c()
-	p_sig <- c()
-	p_fit <- c()
+	yp_beta <- c()
+	yp_gamma <- c()
+	yp_beta_se <- c()
+	yp_gamma_se <- c()
+	yp_p_sig <- c()
+	yp_p_fit <- c()
 
 	for(i in 1:ncol(splitdat)){	
 		thisdat <- as.data.frame(cbind(V1 = as.numeric(dat[,1]), V2 = as.numeric(dat[,2]), V3 = as.numeric(splitdat[,i])))
 		yp <- YPmodel(thisdat)
 		yp2 <- yp$Estimate
-		beta <- c(beta, yp2$beta[1])
-		gamma <- c(gamma, yp2$beta[2])
-		beta_se <- c(beta_se, sqrt(abs(yp2$variance.beta1)))
-		gamma_se <- c(gamma_se, sqrt(abs(yp2$variance.beta2)))
-		p_sig <- c(p_sig, yp$Adlgrk$pval)
-		p_fit <- c(p_fit, yp$LackFitTest$pvalu1)
+		yp_beta <- c(yp_beta, yp2$beta[1])
+		yp_gamma <- c(yp_gamma, yp2$beta[2])
+		yp_beta_se <- c(yp_beta_se, sqrt(abs(yp2$variance.beta1)))
+		yp_gamma_se <- c(yp_gamma_se, sqrt(abs(yp2$variance.beta2)))
+		yp_p_sig <- c(yp_p_sig, yp$Adlgrk$pval)
+		yp_p_fit <- c(yp_p_fit, yp$LackFitTest$pvalu1)
 
 	}
+
 
