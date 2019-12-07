@@ -26,7 +26,7 @@ doPropOdds_AgeStage <- function(x){
 	p <- coef(propOdds)[26]
 	p_gof <- propOdds$pval.Prop[1]
 
-	return(c(coeff, coeff_se, p, p_gof))
+	return(c(PO_coeff = coeff, PO_coeff_se = coeff_se,  PO_p = p, PO_GOF_p = p_gof))
 	}
 
 doCox_AgeStage <- function(x){
@@ -38,7 +38,7 @@ doCox_AgeStage <- function(x){
 	p <- coxSum$coefficients[21]
 	p_gof <- gof$table[13]
 
-	return(c(Coeff = coeff, coeff_se,  p, p_gof))
+	return(c(Cox_coeff = coeff, Cox_coeff_se = coeff_se,  Cox_p = p, Cox_GOF_p = p_gof))
 	}
 
 # Example: dat (column 1 = time, column 2 = censor, columns 3+ = gene expression)
@@ -59,7 +59,7 @@ doCox <- function(x){
 	p <- coxSum$coefficients[5]
 	p_gof <- gof$table[3]
 
-	return(c(Coeff = coeff, coeff_se,  p, p_gof))
+	return(c(Cox_coeff = coeff, Cox_coeff_se = coeff_se,  Cox_p = p, Cox_GOF_p = p_gof))
 	}
 
 doPropOdds <- function(x){
@@ -69,7 +69,7 @@ doPropOdds <- function(x){
 	p <- coef(propOdds)[6]
 	p_gof <- propOdds$pval.Prop
 
-	return(c(coeff, coeff_se, p, p_gof))
+	return(c(PO_coeff = coeff, PO_coeff_se = coeff_se,  PO_p = p, PO_GOF_p = p_gof))
 	}
 
 # Example: dat (column 1 = time, column 2 = censor, columns 3+ = gene expression)
