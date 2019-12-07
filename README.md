@@ -69,6 +69,21 @@ This repository contains R code for various feature selection methods. The code 
   * Scheme 2: Multivariate approach; incorporates correlation between features
   * For both schemes, there are options to simulate from the following models: LN, LL1, LL2, W1, W2
 
+* **Complete Example**: This example does the following
+  1. Creates a simulated data set (Scheme 1 - W, 33% censoring)
+  2. Obtains PH, PO & YP model fits and GOF
+  3. Computes all proposed measures for feature selection:
+     * I measures - I<sub>PO</sub>, I<sub>YP</sub>
+     * R<sup>2</sup>_measures - R<sup>2</sup><sub>LR</sub>, R<sup>2</sup><sub>I<sub>PO</sub></sub>, R<sup>2</sup><sub>I<sub>PH</sub></sub>, R<sup>2</sup><sub>PO</sub>, R<sup>2</sup><sub>CO</sub>, R<sup>2</sup><sub>ModCH</sub>
+     * R<sup>2</sup>_measures (by Rouam et al. 2010, 2011) - R<sup>2</sup><sub>CH</sub>, R<sup>2</sup><sub>PH</sub>
+ 	4.  Computes other existing measures (concreg, Uno's C, R<sup>2</sup><sub>G</sub> & R<sup>2</sup><sub>SH</sub>)
+ 	5.  Computes Sensitivity, Specificity, Youden & AUC for each measure.
+ 	6.  Creates venn diagrams showing overlaps between measures.
+  
+  * *Note:  Before running this example, some functions need to be run from the other R code in this repository.  All required functions are noted thoughout the example.*
+  * Required: R packages (survival, timereg, YPmodel, concreg, survAUC, pec, MESS, gplots, VennDiagram, latex2exp)
+
+  
 # Copyright & Citations
 Copyright © Lauren Spirko-Burns and Karthik Devarajan 
 
