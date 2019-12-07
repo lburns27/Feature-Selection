@@ -36,7 +36,7 @@ r2LR <- function(gene, tt, cens){
 
 	quigley <- 1-exp(-2/k*(logBeta - logNull))
 	
-	return(quigley)
+	return(R2_LR = quigley)
 }
 
 # Adjusted for age and stage
@@ -54,7 +54,7 @@ r2LR_AgeStage <- function(gene, tt, cens, age, stage){
 
 	quigley <- 1-exp(-2/k*(logBeta - logNull))
 	
-	return(quigley)
+	return(R2_LR = quigley)
 }
 
 #-------------------------------------------------------------------
