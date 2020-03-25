@@ -78,7 +78,7 @@ colnames(fitPO)[4] <- "PO_GOF_p"
 
 	}
 
-outYP <- as.data.frame(cbind(YP_gamma = yp_beta, YP_beta = yp_gamma, YPbeta_se = yp_beta_se, 
+outYP <- as.data.frame(cbind(YP_gamma = yp_gamma, YP_beta = yp_beta, YPbeta_se = yp_beta_se, 
 		YPgamma_se = yp_gamma_se, YP_p_sig = yp_p_sig, YP_p_fit = yp_p_fit))
 
 #-----------------------------------------------------------------------------
@@ -219,7 +219,7 @@ head(allOut)
 
 # Specify measures of interest
 
-	measures <- c("I2_YP", "I1_PO", "ConcEffect", "R2_LR", "R2_IPO", "R2_IPH", "R2_PO",
+	measures <- c("I_YP", "I_PO", "ConcEffect", "R2_LR", "R2_IPO", "R2_IPH", "R2_PO",
 		"R2_CO", "R2_ModCH", "R2_CH", "R2_PH", "R2G_PH", "R2G_PO", "R2_SH")              
 
 # Calcaulte Sensitivity, Specificity, Youden, & AUC for numbers of interest
